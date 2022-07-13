@@ -179,7 +179,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="aA" destination="INo-Me-Pgx" id="G8d-8Y-P4h"/>
                         <outlet property="annivarsaryDate" destination="7EH-Oz-HkW" id="pFx-fD-VcY"/>
                         <outletCollection property="annivarsaryShadow" destination="53M-h6-ooy" collectionClass="NSMutableArray" id="qzp-bi-9ZA"/>
                         <outletCollection property="annivarsaryShadow" destination="b3O-Vl-BEa" collectionClass="NSMutableArray" id="DHg-mK-dXw"/>
@@ -189,6 +188,10 @@
                         <outletCollection property="annivarsaryImage" destination="pgu-zZ-AnT" collectionClass="NSMutableArray" id="I2n-Vl-hTw"/>
                         <outletCollection property="annivarsaryImage" destination="cnx-n1-zBj" collectionClass="NSMutableArray" id="AiG-mU-ClE"/>
                         <outletCollection property="annivarsaryImage" destination="XYv-DE-vF1" collectionClass="NSMutableArray" id="gRd-kS-3Mf"/>
+                        <outletCollection property="happyDay" destination="INo-Me-Pgx" collectionClass="NSMutableArray" id="X2G-KP-J3F"/>
+                        <outletCollection property="happyDay" destination="O32-DJ-jQd" collectionClass="NSMutableArray" id="y05-ZW-4h2"/>
+                        <outletCollection property="happyDay" destination="d6p-8B-vGk" collectionClass="NSMutableArray" id="ePv-qa-nX6"/>
+                        <outletCollection property="happyDay" destination="0b1-Lg-866" collectionClass="NSMutableArray" id="O1t-SE-EeU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

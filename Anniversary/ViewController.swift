@@ -14,13 +14,17 @@ enum Location {
     case left
 }
 
+
+
 class ViewController: UIViewController {
-    let dateFormat = DateFormatter()
+ 
     @IBOutlet var annivarsaryShadow: [UIView]!
     @IBOutlet var annivarsaryImage: [UIImageView]!
     @IBOutlet weak var annivarsaryDate: UIDatePicker!
     
-    @IBOutlet weak var aA: UILabel!
+
+    @IBOutlet var happyDay: [UILabel]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,8 @@ class ViewController: UIViewController {
         shadowAdd(location: .bottom)
         annivarsaryDate.preferredDatePickerStyle = .inline
         annivarsaryDate.date = .now
-
+        
+        happydayLabel()
     }
     
     
@@ -59,11 +64,25 @@ class ViewController: UIViewController {
       }
     }
     
+    // 날짜 텍스트
+    func happydayLabel() {
+        for i in happyDay {
+            i.textColor = UIColor.white
+            i.text = ""
+        }
+    }
+    
+    // 날짜 변환 위한 함수
+    func happydayLabelChanged(_ i:Int,_ a: Int) {
+            happyDay[i].text = "\(annivarsaryDate.calendar.date(byAdding: .day, value: a, to: annivarsaryDate.date)?.formatted(date: .long, time: .omitted) ?? annivarsaryDate.date.formatted(date: .long, time: .omitted))"
+    }
+    
     // 날짜 변환
     @IBAction func annivarsaryPick(_ sender: UIDatePicker) {
-//         annivarsaryDate.date.formatted(date: .long, time: .omitted)
-        
-        aA.text = "\(annivarsaryDate.calendar.date(byAdding: .day, value: 100, to: annivarsaryDate.date)?.formatted(date: .long, time: .omitted) ?? annivarsaryDate.date.formatted(date: .long, time: .omitted))"
+        for s in 0...happyDay.count-1 {
+            happydayLabelChanged(s, (s+1)*100)
+        }
+      
     }
 
 }
