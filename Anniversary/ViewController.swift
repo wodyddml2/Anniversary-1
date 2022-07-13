@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         shadowAdd(location: .bottom)
         annivarsaryDate.preferredDatePickerStyle = .inline
         annivarsaryDate.date = .now
+        annivarsaryDate.setValue(UIColor.white, forKeyPath: "textColor")
         
         happydayLabel()
     }
