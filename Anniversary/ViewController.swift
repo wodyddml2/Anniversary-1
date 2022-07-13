@@ -59,10 +59,11 @@ class ViewController: UIViewController {
       }
     }
     
-    // 도저히 날짜를 더할 수가.ㄹㅇㄴㄹㅇㄴㄹ.
+    // 날짜 변환
     @IBAction func annivarsaryPick(_ sender: UIDatePicker) {
-        aA.text = annivarsaryDate.date.formatted(date: .long, time: .omitted)
-    
+//         annivarsaryDate.date.formatted(date: .long, time: .omitted)
+        
+        aA.text = "\(annivarsaryDate.calendar.date(byAdding: .day, value: 100, to: annivarsaryDate.date)?.formatted(date: .long, time: .omitted) ?? annivarsaryDate.date.formatted(date: .long, time: .omitted))"
     }
 
 }
