@@ -15,11 +15,12 @@ enum Location {
 }
 
 class ViewController: UIViewController {
-
+    let dateFormat = DateFormatter()
     @IBOutlet var annivarsaryShadow: [UIView]!
     @IBOutlet var annivarsaryImage: [UIImageView]!
     @IBOutlet weak var annivarsaryDate: UIDatePicker!
     
+    @IBOutlet weak var aA: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
         shadowAdd(location: .bottom)
         annivarsaryDate.preferredDatePickerStyle = .inline
         annivarsaryDate.date = .now
-        annivarsaryDate.timeZone = .current
+
     }
     
     
@@ -58,6 +59,10 @@ class ViewController: UIViewController {
       }
     }
     
+    // 도저히 날짜를 더할 수가.ㄹㅇㄴㄹㅇㄴㄹ.
+    @IBAction func annivarsaryPick(_ sender: UIDatePicker) {
+        aA.text = annivarsaryDate.date.formatted(date: .long, time: .omitted)
+    
+    }
 
 }
-
