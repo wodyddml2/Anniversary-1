@@ -69,18 +69,32 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="INX-sk-PWg">
-                        <barButtonItem key="rightBarButtonItem" id="smS-Pj-S5y">
-                            <imageReference key="image" image="plus" catalog="system" renderingMode="hierarchical-single">
-                                <hierarchicalColors>
-                                    <color white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color systemColor="secondaryLabelColor"/>
-                                    <color systemColor="tertiaryLabelColor"/>
-                                </hierarchicalColors>
-                            </imageReference>
-                            <connections>
-                                <action selector="diaryPlus:" destination="Y6W-OH-hqX" id="egm-70-tqT"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="smS-Pj-S5y">
+                                <imageReference key="image" image="plus" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <connections>
+                                    <action selector="diaryPlus:" destination="Y6W-OH-hqX" id="egm-70-tqT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="Rjl-nS-p4v">
+                                <imageReference key="image" image="minus" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <connections>
+                                    <action selector="diaryReset:" destination="Y6W-OH-hqX" id="UHE-yY-vkq"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="mfK-mJ-asU" id="HaH-O0-oS4"/>
@@ -134,6 +148,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="watercolor" width="426.5" height="299"/>
         <systemColor name="secondaryLabelColor">

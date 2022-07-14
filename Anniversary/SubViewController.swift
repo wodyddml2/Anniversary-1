@@ -32,6 +32,8 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    
     let firstDiary = Diary()
     
     @IBOutlet weak var dateSearch: UITextField!
@@ -57,13 +59,31 @@ class SubViewController: UIViewController, UITextFieldDelegate {
     @IBAction func keyboardDown(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-   
+    // Label 문자 삭제
+    @IBAction func diaryReset(_ sender: UIBarButtonItem) {
+        if dateLabel.text != "" {
+            firstDiary.diary.removeLast()
+            firstDiary.anniversary(dateLabel, dateSearch)
+        } else {
+            let alert = UIAlertController.init(title: "경고", message: "텍스트가 비었습니다.", preferredStyle: .alert)
+            
+            let ok = UIAlertAction.init(title: "확인", style: .destructive, handler: nil)
+        
+            alert.addAction(ok)
+            present(alert, animated: true)
+        }
+        
+//        dateLabel.text = ""
+    }
+    
+    
     @IBAction func diaryPlus(_ sender: UIBarButtonItem) {
         let alert = UIAlertController.init(title: "해당 내용을 저장하시겠습니까?", message: nil, preferredStyle: .alert)
         
         let ok = UIAlertAction.init(title: "확인", style: .default, handler: nil)
         
         let cancle = UIAlertAction.init(title: "취소", style: .cancel, handler: nil)
+    
         
         alert.addAction(ok)
         alert.addAction(cancle)
