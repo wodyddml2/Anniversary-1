@@ -83,7 +83,7 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem id="Rjl-nS-p4v">
-                                <imageReference key="image" image="minus" catalog="system" renderingMode="hierarchical-single">
+                                <imageReference key="image" image="gobackward" catalog="system" renderingMode="hierarchical-single">
                                     <hierarchicalColors>
                                         <color white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color systemColor="secondaryLabelColor"/>
@@ -148,7 +148,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="gobackward" catalog="system" width="121" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="watercolor" width="426.5" height="299"/>
         <systemColor name="secondaryLabelColor">

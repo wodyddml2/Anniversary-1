@@ -19,7 +19,7 @@ class SubViewController: UIViewController, UITextFieldDelegate {
             a.font = UIFont.boldSystemFont(ofSize: 17)
             a.numberOfLines = 0
         }
-        func anniversary(_ a: UILabel, _ b: UITextField) {
+        func anniversaryAdd(_ a: UILabel, _ b: UITextField) {
             guard let diaryText = b.text else {
                 return
             }
@@ -30,6 +30,19 @@ class SubViewController: UIViewController, UITextFieldDelegate {
                 a.text! += " \(self.diary[i])"
             }
         }
+        
+        func anniversaryRemove(_ a: UILabel, _ b: UITextField) {
+            guard b.text != nil else {
+                return
+            }
+            
+            a.text = ""
+            for i in 0...self.diary.count - 1 {
+                
+                a.text! += " \(self.diary[i])"
+            }
+        }
+
         
     }
     
@@ -47,10 +60,10 @@ class SubViewController: UIViewController, UITextFieldDelegate {
       
     }
     
-    
+    // Label에 Enter 칠 때마다 차례로 글자 입력
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dateSearch.resignFirstResponder()
-        firstDiary.anniversary(dateLabel, dateSearch)
+        firstDiary.anniversaryAdd(dateLabel, dateSearch)
         dateSearch.text = ""
         return true
     }
@@ -59,12 +72,19 @@ class SubViewController: UIViewController, UITextFieldDelegate {
     @IBAction func keyboardDown(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    // Label 문자 삭제
+    
+    // Label 문자 되돌리기, 텍스트가 비었을 경우 경고 메세지
     @IBAction func diaryReset(_ sender: UIBarButtonItem) {
         if dateLabel.text != "" {
-            firstDiary.diary.removeLast()
-            firstDiary.anniversary(dateLabel, dateSearch)
-        } else {
+            if firstDiary.diary.count == 1 {
+                firstDiary.diary.removeLast()
+                dateLabel.text = ""
+            } else {
+                firstDiary.diary.removeLast()
+                firstDiary.anniversaryRemove(dateLabel, dateSearch)
+            }
+            
+        } else if dateLabel.text == "" {
             let alert = UIAlertController.init(title: "경고", message: "텍스트가 비었습니다.", preferredStyle: .alert)
             
             let ok = UIAlertAction.init(title: "확인", style: .destructive, handler: nil)
@@ -73,10 +93,9 @@ class SubViewController: UIViewController, UITextFieldDelegate {
             present(alert, animated: true)
         }
         
-//        dateLabel.text = ""
     }
     
-    
+    // 완성된 Label 다른 페이지에 저장하기 위한 초석이랄까...
     @IBAction func diaryPlus(_ sender: UIBarButtonItem) {
         let alert = UIAlertController.init(title: "해당 내용을 저장하시겠습니까?", message: nil, preferredStyle: .alert)
         
