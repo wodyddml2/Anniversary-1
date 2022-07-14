@@ -9,6 +9,25 @@ import UIKit
 
 class SubViewController: UIViewController, UITextFieldDelegate {
 
+    class Anniversary {
+        var one = "오늘은 널 만난지 100일"
+        var two = "오늘은 널 만난지 200일"
+        var three = "오늘은 널 만난지 300일"
+        var four = "오늘은 널 만난지 400일"
+        
+       
+        func anniversary(a: UILabel) {
+            a.text = ""
+            a.textColor = UIColor.darkGray
+            a.numberOfLines = 0
+            
+            for i in arr {
+                
+            }
+        }
+        func
+        
+    }
    
     @IBOutlet weak var dateSearch: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
@@ -19,6 +38,8 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         
       
     }
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dateSearch.resignFirstResponder()
         return true
