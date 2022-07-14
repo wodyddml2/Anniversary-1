@@ -43,7 +43,7 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         dateSearch.delegate = self
         
         firstDiary.anniversary(dateLabel)
-        
+        dateSearch.placeholder = "서로의 이야기를 적어주세요 :)"
       
     }
     
