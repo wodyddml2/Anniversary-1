@@ -25,6 +25,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var happyDay: [UILabel]!
     
+    let format = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,28 @@ class ViewController: UIViewController {
         annivarsaryDate.setValue(UIColor.white, forKeyPath: "textColor")
         
         happydayLabel()
+        
+//
+//        format.locale = Locale(identifier: "ko_kr")
+//        format.timeZone = TimeZone(abbreviation: "KST")
+//        format.dateFormat = "yyyy년 M월 d일"
+//        for i in happyDay {
+//            i.text = format.string(from: Date())
+//        }
+//
+//        let dday = "1997년 12월 26일"
+//        if let result = format.date(from: dday){
+//            print(result)
+//        } else {
+//            print(Date())
+//        }
+//
+        // 처음 화면에서 계산된 레이블 추가
+        for s in 0...happyDay.count-1 {
+            happydayLabelChanged(s, (s+1)*100)
+        }
+        
+        
     }
     
     
