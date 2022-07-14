@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvp-T7-iCA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--우리의 기념일-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Anniversary" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +21,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7EH-Oz-HkW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                                 <connections>
                                     <action selector="annivarsaryPick:" destination="BYZ-38-t0r" eventType="valueChanged" id="TpN-h3-sMb"/>
                                 </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="45P-gI-Anc">
-                                <rect key="frame" x="20.5" y="502" width="373" height="161.5"/>
+                                <rect key="frame" x="20.5" y="546" width="373" height="161.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53M-h6-ooy">
                                         <rect key="frame" x="0.0" y="0.0" width="181.5" height="161.5"/>
@@ -97,7 +98,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-rW-Wjf">
-                                <rect key="frame" x="20.5" y="673.5" width="373" height="161"/>
+                                <rect key="frame" x="20.5" y="717.5" width="373" height="161"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9C-NE-5NL">
                                         <rect key="frame" x="0.0" y="0.0" width="181.5" height="161"/>
@@ -189,6 +190,21 @@
                             <constraint firstItem="45P-gI-Anc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xtM-OZ-Oio"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="우리의 기념일" id="1H5-NE-KVh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sOf-xK-kz8"/>
+                        <barButtonItem key="rightBarButtonItem" id="byx-A8-nKO">
+                            <imageReference key="image" image="paperplane.fill" catalog="system" renderingMode="hierarchical-single">
+                                <hierarchicalColors>
+                                    <color red="0.28564946340000003" green="0.28564946340000003" blue="0.28564946340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <connections>
+                                <segue destination="HfG-wQ-v7o" kind="show" id="JPr-hb-RMd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="annivarsaryDate" destination="7EH-Oz-HkW" id="pFx-fD-VcY"/>
                         <outletCollection property="annivarsaryShadow" destination="53M-h6-ooy" collectionClass="NSMutableArray" id="qzp-bi-9ZA"/>
@@ -207,15 +223,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="69.642857142857139"/>
+        </scene>
+        <!--Sub-->
+        <scene sceneID="CDU-8s-4FF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sub" id="HfG-wQ-v7o" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tjh-8a-ZFB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gio-7q-wrk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="70"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sWt-gW-h0c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zvp-T7-iCA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fdu-vH-SSI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bbA-od-4Yp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9a-0G-JMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="fall" width="640" height="640"/>
         <image name="frame" width="426.5" height="426.5"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="spring" width="640" height="640"/>
         <image name="summer" width="512" height="640"/>
         <image name="winter" width="452" height="640"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -224,6 +272,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
