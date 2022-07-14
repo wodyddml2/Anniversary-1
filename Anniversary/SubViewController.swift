@@ -26,7 +26,7 @@ class SubViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             self.diary.append(diaryText)
-            a.text = ""
+            a.text = " "
             for i in 0...self.diary.count - 1 {
                 
                 a.text! += self.diary[i]
@@ -51,6 +51,7 @@ class SubViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dateSearch.resignFirstResponder()
         firstDiary.anniversary(dateLabel, dateSearch)
+        dateSearch.text = ""
         return true
     }
     
