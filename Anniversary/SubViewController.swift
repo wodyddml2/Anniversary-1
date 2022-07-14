@@ -16,16 +16,14 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         var four = "오늘은 널 만난지 400일"
         
        
-        func anniversary(a: UILabel) {
+        func anniversary(_ a: UILabel) {
             a.text = ""
             a.textColor = UIColor.darkGray
             a.numberOfLines = 0
-            
-            for i in arr {
-                
-            }
         }
-        func
+        override func anniversary(_ a: UILabel) {
+            
+        }
         
     }
    

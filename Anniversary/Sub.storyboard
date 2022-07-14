@@ -23,8 +23,8 @@
                                     <outletCollection property="gestureRecognizers" destination="FZ3-w6-j6k" appends="YES" id="WbV-U5-3FQ"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-mJ-asU">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-mJ-asU">
+                                <rect key="frame" x="192.5" y="438" width="29.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,7 +57,9 @@
                             <constraint firstAttribute="bottom" secondItem="aW9-jd-cjp" secondAttribute="bottom" id="Gis-0g-tRX"/>
                             <constraint firstItem="5AN-w1-mNv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="HNr-S8-zT4"/>
                             <constraint firstItem="aW9-jd-cjp" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="JwQ-Wl-kxw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mfK-mJ-asU" secondAttribute="trailing" constant="20" id="LQw-Wb-8Rv"/>
                             <constraint firstItem="mfK-mJ-asU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NKu-Nf-V1s"/>
+                            <constraint firstItem="mfK-mJ-asU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="POc-RG-4Mm"/>
                             <constraint firstItem="mfK-mJ-asU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="eUT-mm-I0b"/>
                             <constraint firstItem="aW9-jd-cjp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="h6U-jh-qjw"/>
                             <constraint firstAttribute="trailing" secondItem="aW9-jd-cjp" secondAttribute="trailing" id="m3b-7i-FRc"/>
