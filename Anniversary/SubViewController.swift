@@ -26,10 +26,10 @@ class SubViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             self.diary.append(diaryText)
-            a.text = " "
+            a.text = ""
             for i in 0...self.diary.count - 1 {
                 
-                a.text! += self.diary[i]
+                a.text! += " \(self.diary[i])"
             }
         }
         
