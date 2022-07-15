@@ -13,6 +13,10 @@
 		632BE889287E7E5300BE49FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632BE887287E7E5300BE49FA /* Main.storyboard */; };
 		632BE88B287E7E5400BE49FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632BE88A287E7E5400BE49FA /* Assets.xcassets */; };
 		632BE88E287E7E5400BE49FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632BE88C287E7E5400BE49FA /* LaunchScreen.storyboard */; };
+		633AE0052880E83800AAA164 /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633AE0042880E83800AAA164 /* Transition.storyboard */; };
+		633AE0072880EFC200AAA164 /* TransitionFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633AE0062880EFC200AAA164 /* TransitionFirstViewController.swift */; };
+		633AE0092880FE1800AAA164 /* TransitionSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633AE0082880FE1800AAA164 /* TransitionSecondViewController.swift */; };
+		633AE00B2881004B00AAA164 /* TranstionThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633AE00A2881004B00AAA164 /* TranstionThirdViewController.swift */; };
 		6379B43728804CB000F00138 /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379B43628804CB000F00138 /* StorageViewController.swift */; };
 		639F7ADA287FFF1C00558426 /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639F7AD9287FFF1C00558426 /* Sub.storyboard */; };
 		639F7ADC287FFF4B00558426 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F7ADB287FFF4B00558426 /* SubViewController.swift */; };
@@ -28,6 +32,10 @@
 		632BE88A287E7E5400BE49FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632BE88D287E7E5400BE49FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		632BE88F287E7E5400BE49FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633AE0042880E83800AAA164 /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
+		633AE0062880EFC200AAA164 /* TransitionFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFirstViewController.swift; sourceTree = "<group>"; };
+		633AE0082880FE1800AAA164 /* TransitionSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionSecondViewController.swift; sourceTree = "<group>"; };
+		633AE00A2881004B00AAA164 /* TranstionThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranstionThirdViewController.swift; sourceTree = "<group>"; };
 		6379B43628804CB000F00138 /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 		639F7AD9287FFF1C00558426 /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
 		639F7ADB287FFF4B00558426 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 		632BE880287E7E5300BE49FA /* Anniversary */ = {
 			isa = PBXGroup;
 			children = (
+				633AE0032880E81900AAA164 /* Transition */,
 				632BE881287E7E5300BE49FA /* AppDelegate.swift */,
 				632BE883287E7E5300BE49FA /* SceneDelegate.swift */,
 				632BE885287E7E5300BE49FA /* ViewController.swift */,
@@ -76,6 +85,17 @@
 				632BE88F287E7E5400BE49FA /* Info.plist */,
 			);
 			path = Anniversary;
+			sourceTree = "<group>";
+		};
+		633AE0032880E81900AAA164 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				633AE0042880E83800AAA164 /* Transition.storyboard */,
+				633AE0062880EFC200AAA164 /* TransitionFirstViewController.swift */,
+				633AE0082880FE1800AAA164 /* TransitionSecondViewController.swift */,
+				633AE00A2881004B00AAA164 /* TranstionThirdViewController.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +166,7 @@
 				632BE88B287E7E5400BE49FA /* Assets.xcassets in Resources */,
 				632BE889287E7E5300BE49FA /* Main.storyboard in Resources */,
 				639F7ADA287FFF1C00558426 /* Sub.storyboard in Resources */,
+				633AE0052880E83800AAA164 /* Transition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +179,11 @@
 			files = (
 				632BE886287E7E5300BE49FA /* ViewController.swift in Sources */,
 				632BE882287E7E5300BE49FA /* AppDelegate.swift in Sources */,
+				633AE0072880EFC200AAA164 /* TransitionFirstViewController.swift in Sources */,
 				632BE884287E7E5300BE49FA /* SceneDelegate.swift in Sources */,
 				6379B43728804CB000F00138 /* StorageViewController.swift in Sources */,
+				633AE00B2881004B00AAA164 /* TranstionThirdViewController.swift in Sources */,
+				633AE0092880FE1800AAA164 /* TransitionSecondViewController.swift in Sources */,
 				639F7ADC287FFF4B00558426 /* SubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +339,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +368,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -101,11 +101,17 @@ class ViewController: UIViewController {
             happyDay[i].text = "\(annivarsaryDate.calendar.date(byAdding: .day, value: a, to: annivarsaryDate.date)?.formatted(date: .long, time: .omitted) ?? annivarsaryDate.date.formatted(date: .long, time: .omitted))"
     }
     
-    // 날짜 변환
+    
     @IBAction func annivarsaryPick(_ sender: UIDatePicker) {
+        // 날짜 변환
         for s in 0...happyDay.count-1 {
             happydayLabelChanged(s, (s+1)*100)
         }
+        // 클릭한 날짜 저장
+        let currentDate = annivarsaryDate.date.formatted(date: .long, time: .omitted)
+        UserDefaults.standard.set(currentDate, forKey: "day")
+        
+//        print(UserDefaults.standard.string(forKey: "day"))
       
     }
 
