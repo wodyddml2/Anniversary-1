@@ -124,18 +124,4 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true)
     }
     
-    
-    
-    
-    // Label에 써진 글들을 다른 ViewController에 보내 저장하기 도전....
-
-//    @IBAction func first(_ sender: UIBarButtonItem) {
-//        guard let vc = storyboard?.instantiateViewController(identifier: "goTo") as? StorageViewController else {
-//            return
-//        }
-//        vc.parr = self.dateLabel.text!
-//
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
-    
 }

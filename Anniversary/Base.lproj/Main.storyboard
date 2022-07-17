@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--우리의 기념일-->
+        <!--Our Anniversary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Anniversary" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,7 +190,7 @@
                             <constraint firstItem="45P-gI-Anc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xtM-OZ-Oio"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="우리의 기념일" id="1H5-NE-KVh">
+                    <navigationItem key="navigationItem" title="Our Anniversary" id="1H5-NE-KVh">
                         <barButtonItem key="backBarButtonItem" title=" " id="sOf-xK-kz8"/>
                         <barButtonItem key="rightBarButtonItem" id="byx-A8-nKO">
                             <imageReference key="image" image="paperplane.fill" catalog="system" renderingMode="hierarchical-single">
