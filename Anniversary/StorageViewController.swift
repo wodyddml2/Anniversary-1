@@ -30,12 +30,14 @@ class StorageViewController: UIViewController {
         okButtonStyle()
     }
     
+    // 날짜 스타일
     func diaryTextStyle(_ labelName: UILabel, _ fontSize: CGFloat) {
         labelName.font = .boldSystemFont(ofSize: fontSize)
         labelName.textAlignment = .center
         labelName.textColor = .darkGray
     }
     
+    // 버튼 스타일
     func okButtonStyle() {
         okButton.layer.masksToBounds = true
         okButton.layer.cornerRadius = 10
@@ -45,6 +47,7 @@ class StorageViewController: UIViewController {
         okButton.setTitleColor(.systemIndigo, for: .highlighted)
     }
 
+    // unwind 연결
     @IBAction func okButtonClicked(_ sender: UIButton) {
     }
     

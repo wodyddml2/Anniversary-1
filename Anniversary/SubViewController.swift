@@ -70,12 +70,12 @@ class SubViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dateSearch.resignFirstResponder()
         firstDiary.anniversaryAdd(dateLabel, dateSearch)
-        UserDefaults.standard.set(dateLabel.text, forKey: "text")
+        
         dateSearch.text = ""
         return true
     }
     
-  
+  // 배경 터치 시 모든 편집 중단
     @IBAction func keyboardDown(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -113,10 +113,13 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         guard let vc = self.storyboard?.instantiateViewController(identifier: "vc") as? StorageViewController else {return}
         
         // closure: 익명함수로 변수나 상수 ,파라미터에 대입 가능 리턴가능...
-        let ok = UIAlertAction.init(title: "확인", style: .default, handler: {(vcpush) in self.navigationController?.pushViewController(vc, animated: true)})
+        // 확인 누를 시 label 저장과 다음 뷰컨트롤러로 넘어감.
+        let ok = UIAlertAction.init(title: "확인", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)
+            UserDefaults.standard.set(self.dateLabel.text, forKey: "text")
+        })
         
         let cancle = UIAlertAction.init(title: "취소", style: .cancel, handler: nil)
-    
+        UserDefaults.standard.set(dateLabel.text, forKey: "text")
         
         alert.addAction(ok)
         alert.addAction(cancle)
