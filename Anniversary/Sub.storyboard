@@ -151,6 +151,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZQ-8c-AOI">
+                                <rect key="frame" x="327" y="632.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="okButtonClicked:" destination="vtN-Nd-tGd" eventType="touchUpInside" id="KBM-st-8H9"/>
+                                    <segue destination="21v-ZY-DvF" kind="unwind" unwindAction="unwindVCAWithFirstSegue:" id="ngq-g1-DNO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bjf-QO-S4k"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,6 +167,7 @@
                             <constraint firstItem="cU9-Tm-lfb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bjf-QO-S4k" secondAttribute="leading" constant="20" id="54g-1C-wAg"/>
                             <constraint firstItem="bjf-QO-S4k" firstAttribute="trailing" secondItem="8OL-K6-dzP" secondAttribute="trailing" constant="20" id="A7y-gP-DvM"/>
                             <constraint firstAttribute="trailing" secondItem="3Ya-re-OMM" secondAttribute="trailing" id="AHC-RU-HNj"/>
+                            <constraint firstItem="EZQ-8c-AOI" firstAttribute="top" secondItem="8OL-K6-dzP" secondAttribute="bottom" constant="50" id="EUq-xC-8Vf"/>
                             <constraint firstItem="8OL-K6-dzP" firstAttribute="height" secondItem="3Ya-re-OMM" secondAttribute="height" multiplier="0.3" id="F1o-Mc-xpG"/>
                             <constraint firstItem="cU9-Tm-lfb" firstAttribute="top" secondItem="bjf-QO-S4k" secondAttribute="top" constant="60" id="H2j-lm-RGV"/>
                             <constraint firstItem="bjf-QO-S4k" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cU9-Tm-lfb" secondAttribute="trailing" constant="20" id="Osf-LM-HAq"/>
@@ -167,6 +177,7 @@
                             <constraint firstAttribute="bottom" secondItem="3Ya-re-OMM" secondAttribute="bottom" id="aL9-6d-C0F"/>
                             <constraint firstItem="8OL-K6-dzP" firstAttribute="centerY" secondItem="acY-AE-AbM" secondAttribute="centerY" id="gSR-8d-q5o"/>
                             <constraint firstItem="3Ya-re-OMM" firstAttribute="top" secondItem="acY-AE-AbM" secondAttribute="top" id="j7k-cJ-lSY"/>
+                            <constraint firstItem="bjf-QO-S4k" firstAttribute="trailing" secondItem="EZQ-8c-AOI" secondAttribute="trailing" constant="20" id="wpa-yz-WHp"/>
                             <constraint firstItem="3Ya-re-OMM" firstAttribute="leading" secondItem="acY-AE-AbM" secondAttribute="leading" id="zxZ-ZW-uwa"/>
                         </constraints>
                     </view>
@@ -175,9 +186,11 @@
                         <outlet property="diaryBackground" destination="8OL-K6-dzP" id="QUr-aI-0XR"/>
                         <outlet property="diaryDay" destination="cU9-Tm-lfb" id="4fG-d0-T1g"/>
                         <outlet property="diaryStory" destination="UFQ-iN-v2d" id="u4M-5C-WZd"/>
+                        <outlet property="okButton" destination="EZQ-8c-AOI" id="Wd9-Ry-sd3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfS-Yk-57q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="21v-ZY-DvF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1871.0144927536232" y="93.75"/>
         </scene>

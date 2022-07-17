@@ -13,6 +13,7 @@ class StorageViewController: UIViewController {
     @IBOutlet weak var diaryBackground: UIView!
     @IBOutlet weak var diaryStory: UILabel!
     
+    @IBOutlet weak var okButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -26,7 +27,7 @@ class StorageViewController: UIViewController {
         diaryTextStyle(diaryDay, 17)
         diaryDay.text = UserDefaults.standard.string(forKey: "day")
         
-        
+        okButtonStyle()
     }
     
     func diaryTextStyle(_ labelName: UILabel, _ fontSize: CGFloat) {
@@ -34,7 +35,18 @@ class StorageViewController: UIViewController {
         labelName.textAlignment = .center
         labelName.textColor = .darkGray
     }
+    
+    func okButtonStyle() {
+        okButton.layer.masksToBounds = true
+        okButton.layer.cornerRadius = 10
+        okButton.backgroundColor = .lightGray
+        okButton.setTitle("Save", for: .normal)
+        okButton.setTitleColor(.white, for: .normal)
+        okButton.setTitleColor(.systemIndigo, for: .highlighted)
+    }
 
-
+    @IBAction func okButtonClicked(_ sender: UIButton) {
+    }
+    
     
 }
