@@ -10,11 +10,10 @@ import UIKit
 class StorageViewController: UIViewController {
 
     @IBOutlet weak var la: UILabel!
-    var parr:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        la.text = parr
-        // Do any additional setup after loading the view.
+        la.text = UserDefaults.standard.string(forKey: "text")
     }
     
 

@@ -46,8 +46,12 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+  
     
     let firstDiary = Diary()
+    
+
+    @IBOutlet weak var navigationTitle: UINavigationItem!
     
     @IBOutlet weak var dateSearch: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
@@ -57,6 +61,8 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         
         firstDiary.anniversary(dateLabel)
         dateSearch.placeholder = "서로의 이야기를 적어주세요 :)"
+        
+        navigationTitle.title = UserDefaults.standard.string(forKey: "day")
       
     }
     
@@ -64,6 +70,7 @@ class SubViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dateSearch.resignFirstResponder()
         firstDiary.anniversaryAdd(dateLabel, dateSearch)
+        UserDefaults.standard.set(dateLabel.text, forKey: "text")
         dateSearch.text = ""
         return true
     }

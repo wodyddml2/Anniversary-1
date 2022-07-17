@@ -57,6 +57,11 @@ class ViewController: UIViewController {
             happydayLabelChanged(s, (s+1)*100)
         }
         
+        // 글쓰는 페이지 날짜 형태
+        format.dateFormat = "yyyy.MM.dd"
+
+        // 임시방편
+        UserDefaults.standard.set(format.string(from: annivarsaryDate.date), forKey: "day")
         
     }
     
@@ -107,12 +112,16 @@ class ViewController: UIViewController {
         for s in 0...happyDay.count-1 {
             happydayLabelChanged(s, (s+1)*100)
         }
+        
         // 클릭한 날짜 저장
-        let currentDate = annivarsaryDate.date.formatted(date: .long, time: .omitted)
+        let currentDate = format.string(from: sender.date)
+
         UserDefaults.standard.set(currentDate, forKey: "day")
         
-//        print(UserDefaults.standard.string(forKey: "day"))
-      
     }
+    
+    
+    
+    
 
 }
