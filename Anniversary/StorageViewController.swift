@@ -40,7 +40,7 @@ class StorageViewController: UIViewController {
         okButton.layer.masksToBounds = true
         okButton.layer.cornerRadius = 10
         okButton.backgroundColor = .lightGray
-        okButton.setTitle("Save", for: .normal)
+        okButton.setTitle("ok", for: .normal)
         okButton.setTitleColor(.white, for: .normal)
         okButton.setTitleColor(.systemIndigo, for: .highlighted)
     }
