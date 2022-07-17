@@ -102,11 +102,18 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    // 완성된 Label 다른 페이지에 저장하기 위한 초석이랄까...
+    // alert로 다음 페이지로 넘어가기
     @IBAction func diaryPlus(_ sender: UIBarButtonItem) {
         let alert = UIAlertController.init(title: "해당 내용을 저장하시겠습니까?", message: nil, preferredStyle: .alert)
         
-        let ok = UIAlertAction.init(title: "확인", style: .default, handler: nil)
+        // identifier: viewcontroller의 고유한 식별자 (Storyboard ID속성)
+        // instantiateViewController: 지정된 식별자로 뷰컨을 만들고 스토리보드의 데이터로 초기화 (인스턴스화)
+        // as: 타입 캐스팅으로 업캐스팅 다운캐스팅이 존재,  (업캐스팅은 서브클래스의 인스턴스를 슈퍼클래스의 타입으로 참조,  다운캐스팅은 업캐스팅의 반대로 캐스팅 실패 가능성 때문에 !,?를 사용 ?사용시 무조건 optional 타입 명시)
+        
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "vc") as? StorageViewController else {return}
+        
+        // closure: 익명함수로 변수나 상수 ,파라미터에 대입 가능 리턴가능...
+        let ok = UIAlertAction.init(title: "확인", style: .default, handler: {(vcpush) in self.navigationController?.pushViewController(vc, animated: true)})
         
         let cancle = UIAlertAction.init(title: "취소", style: .cancel, handler: nil)
     
