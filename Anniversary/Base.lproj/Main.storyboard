@@ -192,6 +192,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Our Anniversary" id="1H5-NE-KVh">
                         <barButtonItem key="backBarButtonItem" title=" " id="sOf-xK-kz8"/>
+                        <barButtonItem key="leftBarButtonItem" id="T8b-br-7Xh">
+                            <imageReference key="image" image="list.bullet" catalog="system" renderingMode="hierarchical-single">
+                                <hierarchicalColors>
+                                    <color white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <connections>
+                                <segue destination="bQy-3E-NYk" kind="show" id="rIZ-zh-jW6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="byx-A8-nKO">
                             <imageReference key="image" image="paperplane.fill" catalog="system" renderingMode="hierarchical-single">
                                 <hierarchicalColors>
@@ -225,6 +237,16 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="69.642857142857139"/>
         </scene>
+        <!--DiaryList-->
+        <scene sceneID="yxr-ei-ehC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DiaryList" id="bQy-3E-NYk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rqp-ks-AOC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GQ-TL-d2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="482"/>
+        </scene>
         <!--Sub-->
         <scene sceneID="CDU-8s-4FF">
             <objects>
@@ -257,6 +279,7 @@
     <resources>
         <image name="fall" width="640" height="640"/>
         <image name="frame" width="426.5" height="426.5"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="spring" width="640" height="640"/>
         <image name="summer" width="512" height="640"/>

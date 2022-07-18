@@ -49,12 +49,16 @@ class SubViewController: UIViewController, UITextFieldDelegate {
   
     
     let firstDiary = Diary()
-    
+
 
     @IBOutlet weak var navigationTitle: UINavigationItem!
     
     @IBOutlet weak var dateSearch: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
+    //
+    var keyArr: [String] = []
+    var keyID = 0
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         dateSearch.delegate = self
@@ -65,6 +69,7 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         navigationTitle.title = UserDefaults.standard.string(forKey: "day")
       
     }
+    
     
     // Label에 Enter 칠 때마다 차례로 글자 입력
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -111,11 +116,20 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         // as: 타입 캐스팅으로 업캐스팅 다운캐스팅이 존재,  (업캐스팅은 서브클래스의 인스턴스를 슈퍼클래스의 타입으로 참조,  다운캐스팅은 업캐스팅의 반대로 캐스팅 실패 가능성 때문에 !,?를 사용 ?사용시 무조건 optional 타입 명시)
         
         guard let vc = self.storyboard?.instantiateViewController(identifier: "vc") as? StorageViewController else {return}
+   
         
+//        vc2.keyID = keyID
         // closure: 익명함수로 변수나 상수 ,파라미터에 대입 가능 리턴가능...
         // 확인 누를 시 label 저장과 다음 뷰컨트롤러로 넘어감.
         let ok = UIAlertAction.init(title: "확인", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)
             UserDefaults.standard.set(self.dateLabel.text, forKey: "text")
+            
+            //
+            self.keyArr.append(self.navigationTitle.title!)
+            UserDefaults.standard.set(self.keyArr[self.keyID], forKey: "\(self.keyID)")
+            UserDefaults.standard.set(self.keyID, forKey: "keyCount")
+            self.keyID += 1
+//            print(self.keys.keyID)
         })
         
         let cancle = UIAlertAction.init(title: "취소", style: .cancel, handler: nil)

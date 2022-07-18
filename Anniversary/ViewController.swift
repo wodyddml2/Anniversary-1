@@ -115,9 +115,10 @@ class ViewController: UIViewController {
         
         // 클릭한 날짜 저장
         let currentDate = format.string(from: sender.date)
-
-        UserDefaults.standard.set(currentDate, forKey: "day")
         
+        
+        UserDefaults.standard.set(currentDate, forKey: "day")
+    
     }
     
     @IBAction func unwindVCA(firstSegue: UIStoryboardSegue) {

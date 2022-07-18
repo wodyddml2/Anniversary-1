@@ -46,6 +46,8 @@ class StorageViewController: UIViewController {
         okButton.setTitleColor(.white, for: .normal)
         okButton.setTitleColor(.systemIndigo, for: .highlighted)
     }
+    
+    
 
     // unwind 연결
     @IBAction func okButtonClicked(_ sender: UIButton) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630BB38B28857BAA0022DFE0 /* DiaryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630BB38A28857BAA0022DFE0 /* DiaryList.storyboard */; };
+		630BB38D28857BC40022DFE0 /* DiaryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630BB38C28857BC40022DFE0 /* DiaryListTableViewController.swift */; };
 		632BE882287E7E5300BE49FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BE881287E7E5300BE49FA /* AppDelegate.swift */; };
 		632BE884287E7E5300BE49FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BE883287E7E5300BE49FA /* SceneDelegate.swift */; };
 		632BE886287E7E5300BE49FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BE885287E7E5300BE49FA /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630BB38A28857BAA0022DFE0 /* DiaryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryList.storyboard; sourceTree = "<group>"; };
+		630BB38C28857BC40022DFE0 /* DiaryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListTableViewController.swift; sourceTree = "<group>"; };
 		632BE87E287E7E5300BE49FA /* Anniversary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anniversary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632BE881287E7E5300BE49FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		632BE883287E7E5300BE49FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,8 +82,10 @@
 				632BE885287E7E5300BE49FA /* ViewController.swift */,
 				639F7ADB287FFF4B00558426 /* SubViewController.swift */,
 				6379B43628804CB000F00138 /* StorageViewController.swift */,
+				630BB38C28857BC40022DFE0 /* DiaryListTableViewController.swift */,
 				632BE887287E7E5300BE49FA /* Main.storyboard */,
 				639F7AD9287FFF1C00558426 /* Sub.storyboard */,
+				630BB38A28857BAA0022DFE0 /* DiaryList.storyboard */,
 				632BE88A287E7E5400BE49FA /* Assets.xcassets */,
 				632BE88C287E7E5400BE49FA /* LaunchScreen.storyboard */,
 				632BE88F287E7E5400BE49FA /* Info.plist */,
@@ -166,6 +172,7 @@
 				632BE88B287E7E5400BE49FA /* Assets.xcassets in Resources */,
 				632BE889287E7E5300BE49FA /* Main.storyboard in Resources */,
 				639F7ADA287FFF1C00558426 /* Sub.storyboard in Resources */,
+				630BB38B28857BAA0022DFE0 /* DiaryList.storyboard in Resources */,
 				633AE0052880E83800AAA164 /* Transition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +191,7 @@
 				6379B43728804CB000F00138 /* StorageViewController.swift in Sources */,
 				633AE00B2881004B00AAA164 /* TranstionThirdViewController.swift in Sources */,
 				633AE0092880FE1800AAA164 /* TransitionSecondViewController.swift in Sources */,
+				630BB38D28857BC40022DFE0 /* DiaryListTableViewController.swift in Sources */,
 				639F7ADC287FFF4B00558426 /* SubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
