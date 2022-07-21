@@ -128,13 +128,13 @@ class SubViewController: UIViewController, UITextFieldDelegate {
             
             SubViewController.keyArr.append(self.dateLabel.text!)
             
-            if SubViewController.keyArr.count == 1 {
-                SubViewController.keyID = 0
-            } else if SubViewController.keyArr.count >= 1{
-                SubViewController.keyID += 1
-            }
+//            if SubViewController.keyArr.count == 1 {
+//                SubViewController.keyID = 0
+//            } else if SubViewController.keyArr.count >= 1{
+//                SubViewController.keyID += 1
+//            }
             
-            UserDefaults.standard.set(SubViewController.keyArr[SubViewController.keyID], forKey: "\(SubViewController.keyID)")
+            UserDefaults.standard.set(SubViewController.keyArr, forKey: "keyArray")
             
 
         })
