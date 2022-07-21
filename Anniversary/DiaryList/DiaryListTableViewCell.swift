@@ -12,5 +12,6 @@ class DiaryListTableViewCell: UITableViewCell {
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var diaryTitle: UILabel!
     
+    
 
 }

@@ -56,8 +56,8 @@ class SubViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateSearch: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     //
-    var keyArr: [String] = []
-    var keyID = 0
+    static var keyArr: [String] = []
+    static var keyID = 0
     //
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,14 +122,21 @@ class SubViewController: UIViewController, UITextFieldDelegate {
         // closure: 익명함수로 변수나 상수 ,파라미터에 대입 가능 리턴가능...
         // 확인 누를 시 label 저장과 다음 뷰컨트롤러로 넘어감.
         let ok = UIAlertAction.init(title: "확인", style: .default, handler: { action in self.navigationController?.pushViewController(vc, animated: true)
+            
             UserDefaults.standard.set(self.dateLabel.text, forKey: "text")
             
-            //
-            self.keyArr.append(self.navigationTitle.title!)
-            UserDefaults.standard.set(self.keyArr[self.keyID], forKey: "\(self.keyID)")
-            UserDefaults.standard.set(self.keyID, forKey: "keyCount")
-            self.keyID += 1
-//            print(self.keys.keyID)
+            
+            SubViewController.keyArr.append(self.dateLabel.text!)
+            
+            if SubViewController.keyArr.count == 1 {
+                SubViewController.keyID = 0
+            } else if SubViewController.keyArr.count >= 1{
+                SubViewController.keyID += 1
+            }
+            
+            UserDefaults.standard.set(SubViewController.keyArr[SubViewController.keyID], forKey: "\(SubViewController.keyID)")
+            
+
         })
         
         let cancle = UIAlertAction.init(title: "취소", style: .cancel, handler: nil)
